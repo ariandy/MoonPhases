@@ -20,6 +20,7 @@ func main()  {
 	fmt.Println(ct.E(day,month,year))
 	fmt.Println(ct.M(day,month,year))
 	fmt.Println(ct.Mm(day,month,year))
+	fmt.Println(ct.F(day,month,year))
 }
 
 var day byte = 15
