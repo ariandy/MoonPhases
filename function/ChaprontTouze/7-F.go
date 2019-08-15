@@ -4,7 +4,7 @@ import (
 	fm "moon_phase/function/FloatManipulation"
 )
 
-func F(day byte, month byte, year uint16) float64  {
+func F(day byte, month byte, year uint16) float64 {
 	var k float64 = float64(K(day,month,year))
 	var T float64 = T(day,month,year)
 
