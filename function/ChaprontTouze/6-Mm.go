@@ -2,6 +2,7 @@ package ChaprontTouze
 
 import (
 	fm "moon_phase/function/FloatManipulation"
+	am "moon_phase/function/AngleManipulation"
 )
 
 func Mm(day byte, month byte, year uint16) float64 {
@@ -16,5 +17,7 @@ func Mm(day byte, month byte, year uint16) float64 {
 	he = 0.000000058 *T*T*T*T
 	result = aleph+beth+gimel+daleth-he
 
+	result = fm.FourDecimals(result) 
+	result = am.DegreeCorrection(result)
 	return fm.FourDecimals(result)
 }
