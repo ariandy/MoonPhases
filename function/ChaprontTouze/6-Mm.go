@@ -8,12 +8,13 @@ func Mm(day byte, month byte, year uint16) float64 {
 	var k float64 = float64(K(day,month,year))
 	var T float64 = T(day,month,year)
 
-	var aleph float64 = 201.5643
-	var beth float64 = 385.81693528*k
-	var gimel float64 = 0.0107582*T*T
-	var daleth float64 = 0.00001238 *T*T*T
-	var he float64 = 0.000000058 *T*T*T*T
-	var result float64 = aleph+beth+gimel+daleth-he
+	var aleph, beth, gimel, daleth, he, result float64
+	aleph = 201.5643
+	beth = 385.81693528*k
+	gimel = 0.0107582*T*T
+	daleth = 0.00001238 *T*T*T
+	he = 0.000000058 *T*T*T*T
+	result = aleph+beth+gimel+daleth-he
 
-	return fm.FiveDecimal(result)
+	return fm.FourDecimals(result)
 }
