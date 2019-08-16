@@ -15,8 +15,8 @@ func M(day byte, month byte, year uint16) float64 {
 	beth = 29.10535670*k
 	gimel = 0.0000014*T*T
 	daleth = 0.00000011*T*T*T
-	
 	result = aleph+beth-gimel-daleth
+	
 	result = fm.FourDecimals(result) 
 	result = am.DegreeCorrection(result)
 	return fm.FourDecimals(result) 
